@@ -1,5 +1,15 @@
+.styled__menu {
+  height: 100%;
+}
 .menu__list {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  height: 100%;
+  margin-top: 5vh;
+  li {
+    width: 100%;
+    text-align: center;
+  }
 }

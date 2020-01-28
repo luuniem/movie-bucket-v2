@@ -5,12 +5,12 @@ import "./Menu.scss";
 
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}>
+    <StyledMenu open={open} className="styled__menu">
       <ul className="menu__list">
         <li>My Bucket List</li>
 
-        <li>TEST</li>
-        <li>TEST</li>
+        <li>Upcoming Movies</li>
+        <li>Most Popular Movies</li>
         <li>TEST</li>
         <li>TEST</li>
         <li>TEST</li>
