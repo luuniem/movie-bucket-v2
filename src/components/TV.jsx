@@ -45,7 +45,7 @@ function TV() {
                   title={name}
                 />
 
-                <CardContent class="card__content">
+                <CardContent className="card__content">
                   <Typography gutterBottom variant="h6" component="h3">
                     {name}
                   </Typography>
