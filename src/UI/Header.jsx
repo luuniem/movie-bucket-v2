@@ -4,11 +4,11 @@ import "./Header.scss";
 import Burger from "./../components/Burger/Burger";
 
 const Header = props => {
-  const { children } = props;
+  const { children, enteredSearch, onChangeSearch } = props;
 
   return (
     <section className="header__section">
-      <Search>{children}</Search>
+      <h2>MOVIE BUCKET</h2>
     </section>
   );
 };

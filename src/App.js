@@ -8,22 +8,32 @@ import Header from "./UI/Header";
 import Menu from "./components/Menu/Menu";
 import Burger from "./components/Burger/Burger";
 
-function App() {
+const App = props => {
+  const { children } = props;
+
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+
+  // const [enteredSearch, setEnteredSearch] = useState([]);
+
+  // useEffect( () => {
+  //   const results = tvShows.filter(tvShow =>
+  //     tvShow.toLowerCase().includes(tvSearch)
+  //   );
+  //   setTvSearch(results);
+  // }, [enteredSearch]);
+
   return (
     <div className="App">
-      <Header />
-
+      <Header>{children}</Header>
       <div className="main__content" ref={node}>
         <Burger open={open} setOpen={setOpen} />
-
         <Menu open={open} setOpen={setOpen} />
       </div>
-      <TV />
+      <TV>{children}</TV>
     </div>
   );
-}
+};
 
 export default App;

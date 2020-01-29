@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Axios from "axios";
 import "./TV.scss";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -7,8 +7,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Search from "./Search";
 
-function TV() {
+const TV = props => {
   const [tvData, setTvData] = useState([]);
 
   const [apiKey, url] = [
@@ -16,20 +17,26 @@ function TV() {
     "https://api.themoviedb.org/3/"
   ];
 
+  //Get list of Most popular TV Shows
   useEffect(() => {
     Axios.get(`${url}tv/popular?api_key=${apiKey}`)
       .then(response => {
         setTvData(response.data.results);
-        console.log(response.data.results);
       })
       .catch(error => {
         console.log(error);
       });
   }, []);
 
+  const filteredTvShowHandler = useCallback(filteredShows => {
+    setTvData(filteredShows);
+  }, []);
+
   return (
     <section className="container">
-      <h4> Most Popular TV Shows</h4>
+      {/* <h4> Most Popular TV Shows</h4> */}
+      <br></br>
+      <Search onLoadTVShows={filteredTvShowHandler}></Search>
       <ul className="tv__show__list">
         {tvData.map(tvShow => {
           const { id, poster_path, name, overview } = tvShow;
@@ -73,6 +80,6 @@ function TV() {
       </ul>
     </section>
   );
-}
+};
 
 export default TV;
