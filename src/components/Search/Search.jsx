@@ -7,7 +7,7 @@ import "./Search.scss";
 const Search = props => {
   const [searchValue, setSearchValue] = useState("");
   const inputRef = useRef();
-  const { onLoadTVShows } = props;
+  const { onLoadTitles } = props;
   const [apiKey, url] = [
     process.env.REACT_APP_API_KEY,
     "https://api.themoviedb.org/3/"
@@ -21,13 +21,13 @@ const Search = props => {
       const query = searchValue.length === 0 ? "" : `&query=${searchValue}`;
       Axios.get(`${url}search/multi?api_key=${apiKey}${query}`)
         .then(response => {
-          onLoadTVShows(response.data.results);
+          onLoadTitles(response.data.results);
         })
         .catch(error => {
           console.log(error);
         });
     }, 1000);
-  }, [searchValue, onLoadTVShows, inputRef]);
+  }, [searchValue, onLoadTitles, inputRef]);
 
   return (
     <form noValidate autoComplete="off" className="search__form">

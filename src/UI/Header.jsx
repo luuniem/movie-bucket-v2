@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Search from "../components/Search";
+import Search from "../components/Search/Search";
 import "./Header.scss";
 import Burger from "./../components/Burger/Burger";
 
