@@ -9,6 +9,7 @@ const Header = props => {
   return (
     <section className="header__section">
       <h2>MOVIE BUCKET</h2>
+      {/* <Search>{children}</Search> */}
     </section>
   );
 };
