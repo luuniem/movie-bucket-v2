@@ -1,5 +1,6 @@
 .styled__menu {
   height: 100%;
+  position: fixed;
 }
 .menu__list {
   display: flex;
@@ -8,6 +9,7 @@
   align-items: center;
   height: 100%;
   margin-top: 5vh;
+
   li {
     width: 100%;
     text-align: center;

@@ -53,7 +53,7 @@ const FilteredTitles = props => {
                 <CardMedia
                   className="card__image"
                   component="img"
-                  alt={name}
+                  alt={name ? name : title}
                   image={
                     poster_path
                       ? `${poster}${poster_path}`

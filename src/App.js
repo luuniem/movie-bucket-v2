@@ -21,6 +21,7 @@ const App = props => {
       <Header>{children}</Header>
       <div className="main__content" ref={node}>
         <Burger open={open} setOpen={setOpen} />
+
         <Menu open={open} setOpen={setOpen} />
       </div>
       <FilteredTitles>{children}</FilteredTitles>
