@@ -74,7 +74,7 @@ const FilteredTitles = props => {
                   size="medium"
                   onClick={() => {
                     addToBucketHandler(flick);
-                    removeFromFilteredListHandler(flick.id);
+                    removeFromFilteredListHandler(id);
                   }}
                 >
                   Add

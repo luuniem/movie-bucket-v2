@@ -10,6 +10,10 @@ import "./BucketList.scss";
 const BucketList = props => {
   const { bucketList } = props;
 
+  const removeTitleHandler = flickId => {
+    //stuck
+  };
+
   return (
     <div className="bucket__list">
       <ul className="bucket__show__list">
@@ -20,27 +24,21 @@ const BucketList = props => {
           return (
             <li className="card" key={`${id}-${uniqueID}`}>
               <CardActionArea>
-                {/* <CardMedia
-                  className="card__image"
-                  component="img"
-                  alt={name ? name : title}
-                  image={
-                    poster_path
-                      ? `${poster}${poster_path}`
-                      : `${poster}${backdrop_path}`
-                  }
-                  title={name ? name : title}
-                /> */}
                 <CardContent className="card__content">
-                  <Typography gutterBottom variant="h7" component="h6">
+                  <Typography gutterBottom variant="h6" component="h6">
                     {name ? name : title}
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button className="remove__btn" size="small">
+                <Button
+                  className="remove__btn"
+                  size="small"
+                  onClick={() => removeTitleHandler(id)}
+                >
                   Remove
                 </Button>
+
                 <Button className="more_info__btn" size="small">
                   More Info
                 </Button>
