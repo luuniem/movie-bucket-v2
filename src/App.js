@@ -31,6 +31,7 @@ const App = props => {
             <Route path={"/tv-shows"} exact component={TV} />
           </Switch>
         </>
+        <FilteredTitles />
       </BrowserRouter>
     </div>
   );
