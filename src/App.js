@@ -19,9 +19,9 @@ const App = props => {
 
   return (
     <div className="App">
+      <Header>{children}</Header>
+      <Burger open={open} setOpen={setOpen} />
       <BrowserRouter>
-        <Header>{children}</Header>
-        <Burger open={open} setOpen={setOpen} />
         <>
           <Menu open={open} setOpen={setOpen} />
           <Switch>
