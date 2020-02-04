@@ -24,15 +24,14 @@ const App = props => {
         <Burger open={open} setOpen={setOpen} />
         <>
           <Menu open={open} setOpen={setOpen} />
-          <div className="main__content" ref={node}></div>
           <Switch>
             <Route path="/"></Route>
             <Route path={"/search"} exact component={FilteredTitles} />
             <Route path={"/tv-shows"} exact component={TV} />
           </Switch>
         </>
-        <FilteredTitles />
       </BrowserRouter>
+      <div className="main__content" ref={node}></div>
     </div>
   );
 };

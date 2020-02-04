@@ -13,7 +13,7 @@ const Menu = ({ open }) => {
             <Link to="bucketList">Bucket List</Link>
           </li>
           <li>
-            <Link to={"/search"}>Search</Link>
+            <Link to="/search">Search</Link>
           </li>
           <li>
             <Link to="/">Discover</Link>
