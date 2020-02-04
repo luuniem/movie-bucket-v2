@@ -12,7 +12,6 @@
       min-height: 90px;
       background: #eceff1;
       border-top-right-radius: 10px;
-      //   border-bottom-right-radius: 10px;
     }
     .card__content {
       width: 80%;
@@ -27,7 +26,6 @@
     border-bottom-right-radius: 10px;
     .card__image {
       width: 20%;
-      //   height: 10%;
       background-position: bottom;
       position: absolute;
       left: -15px;
@@ -37,13 +35,7 @@
       -moz-box-shadow: 9px 10px 10px -9px rgba(0, 0, 0, 0.95);
       box-shadow: 9px 10px 10px -9px rgba(0, 0, 0, 0.95);
     }
-    .text__content {
-      text-overflow: ellipsis;
-      max-width: 100ch;
-      white-space: nowrap;
-      width: 75%;
-      overflow: hidden;
-    }
+
     .add__btn {
       background: linear-gradient(45deg, #4d9e14 30%, #61c419 90%);
       color: white;

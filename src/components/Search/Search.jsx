@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Axios from "axios";
 
@@ -23,7 +23,7 @@ const Search = props => {
         .catch(error => {
           console.log(error);
         });
-    }, 1000);
+    }, 500);
     return () => {
       clearTimeout(timer);
     };

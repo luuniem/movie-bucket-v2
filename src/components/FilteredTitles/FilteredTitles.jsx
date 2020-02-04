@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import Axios from "axios";
+import React, { useState, useCallback, useRef } from "react";
 import "./FilteredTitles.scss";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -20,17 +19,24 @@ const FilteredTitles = props => {
 
   //add title to bucket list
   const [buckeTitle, setBucketTitle] = useState([]);
+
   const addToBucketHandler = filteredTitles => {
-    setBucketTitle(prevFilteredTitles => [
-      ...prevFilteredTitles,
-      filteredTitles
-    ]);
+    if (
+      buckeTitle.findIndex(titleId => filteredTitles.id !== filteredTitles.id)
+    ) {
+      setBucketTitle(prevFilteredTitles => [
+        ...prevFilteredTitles,
+        filteredTitles
+      ]);
+    } else {
+      alert("You've already added this title");
+    }
   };
+
   const removeFromFilteredListHandler = titleId => {
     setTitles(prevTitles => prevTitles.filter(titles => titles.id !== titleId));
   };
-  console.log(titles);
-  //   console.log(buckeTitle);
+  //   console.log(titles);
 
   return (
     <section className="container">

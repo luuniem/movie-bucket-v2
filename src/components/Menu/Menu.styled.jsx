@@ -4,10 +4,10 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: grey;
+  background: #2c2c2c;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   width: 20vw;
-
+  min-height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -20,9 +20,9 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
-    padding: 2rem 0;
+    // padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: white;

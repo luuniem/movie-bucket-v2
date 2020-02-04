@@ -1,7 +1,8 @@
 .App {
   position: relative;
   text-align: center;
-  background: lightslategray;
+  background: linear-gradient(45deg, #595959 30%, #2b2b2b 90%);
+
   .main__content {
     padding-top: 10vh;
   }

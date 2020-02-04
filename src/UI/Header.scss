@@ -4,7 +4,7 @@
   box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.75);
   position: fixed;
   right: 0;
-  background: #455a64;
+  background: #000;
   left: 0;
   top: 0;
   z-index: 999;
@@ -12,4 +12,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  h2 {
+    color: #fff;
+    font-family: "Limelight";
+  }
 }

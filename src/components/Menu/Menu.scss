@@ -14,4 +14,14 @@
     width: 100%;
     text-align: center;
   }
+  li:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #fff;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  li:hover:after {
+    transform: scaleX(1);
+  }
 }
