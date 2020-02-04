@@ -19,11 +19,12 @@ const App = props => {
 
   return (
     <div className="App">
-      <Header>{children}</Header>
-      <Burger open={open} setOpen={setOpen} />
       <BrowserRouter>
+        <Header>{children}</Header>
+        <Burger open={open} setOpen={setOpen} />
         <>
           <Menu open={open} setOpen={setOpen} />
+          <div className="main__content" ref={node}></div>
           <Switch>
             <Route path="/"></Route>
             <Route path={"/search"} exact component={FilteredTitles} />
@@ -31,9 +32,6 @@ const App = props => {
           </Switch>
         </>
       </BrowserRouter>
-      <div className="main__content" ref={node}>
-        {/* <FilteredTitles /> */}
-      </div>
     </div>
   );
 };
