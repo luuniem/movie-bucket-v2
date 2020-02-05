@@ -8,7 +8,8 @@ import FilteredTitles from "./components/FilteredTitles/FilteredTitles";
 import Header from "./UI/Header";
 import Menu from "./components/Menu/Menu";
 import Burger from "./components/Burger/Burger";
-import { BrowserRouter, Switch, Route, withRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Test from "./components/Test";
 
 const App = props => {
   const { children } = props;
@@ -24,10 +25,11 @@ const App = props => {
       <BrowserRouter>
         <>
           <Menu open={open} setOpen={setOpen} />
+
           <Switch>
-            <Route path="/"></Route>
-            <Route path={"/search"} component={FilteredTitles} />
-            <Route path={"/tv-shows"} component={TV} />
+            <Route path="/search" component={FilteredTitles} />
+            <Route path="/tv-shows" component={TV} />
+            <Route path="/test" component={Test} />
           </Switch>
         </>
       </BrowserRouter>
